@@ -7,11 +7,11 @@ import unittest
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
 
-class Simple(FunkLoadTestCase):
+class PollsTest(FunkLoadTestCase):
     def setUp(self):
         self.server_url = self.conf_get('main', 'url').rstrip('/')
 
-    def test_simple(self):
+    def test_polls(self):
         server_url = join(self.server_url, 'polls')
         self.get(server_url, description='Get polls')
 
